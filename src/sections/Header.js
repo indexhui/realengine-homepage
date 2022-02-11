@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react';
+
 import { Flex, Image } from '@chakra-ui/react';
 import logo from '../assets/images/logo.jpg';
 
@@ -10,9 +12,23 @@ const space = {
 };
 
 const Header = () => {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+  };
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <header>
       <Flex
+        zIndex="5"
         w="100%"
         bg="white"
         height="60px"
@@ -20,6 +36,9 @@ const Header = () => {
         top="0"
         justify="center"
         align="center"
+        boxShadow={
+          scrollPosition > 100 ? '0 20px 40px 0 rgb(12 0 46 / 6%)' : 'none'
+        }
       >
         <Flex w={space}>
           <Image src={logo} alt="logo" />
