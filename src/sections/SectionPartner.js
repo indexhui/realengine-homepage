@@ -28,17 +28,23 @@ const partners = [
 const SectionPartner = () => {
   const { space } = useSpace();
   return (
-    <Flex w="100%" justify="center" pt="32px">
+    <Flex w="100%" justify="center" pt="60px">
       <Flex w={space} justify="center" align="center" direction="column">
         <Heading as="h2" color="#3D3D3D">
           合作夥伴
         </Heading>
-        <Flex wrap="wrap" my="32px" w="80%" justify="space-between">
+        <Flex
+          wrap="wrap"
+          my="32px"
+          w={{ base: '100%', lg: '80%' }}
+          justify="space-between"
+        >
           {partners.map(partner => (
             <Flex
               w={{ base: '50%', lg: 'auto' }}
               filter="opacity(.5)"
               transition="opacity .5s"
+              justify="center"
               _hover={{
                 filter: 'opacity(1)',
               }}
