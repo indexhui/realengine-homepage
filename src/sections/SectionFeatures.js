@@ -61,12 +61,12 @@ const benefits = [
 const CardFeature = props => {
   return (
     <Flex
-      w="30%"
+      w={{ base: '100%', lg: '30%' }}
       align="center"
       justify="center"
-      px="20px"
+      px="24px"
       direction="column"
-      py="30px"
+      py="36px"
       rounded="sm"
       boxShadow="0 3px 10px 0 rgb(38 59 94 / 10%)"
       _hover={{ boxShadow: '0 30px 60px 0 rgb(38 59 94 / 10%)' }}
@@ -91,9 +91,15 @@ const SectionFeatures = () => {
         <Heading as="h2" color="#3D3D3D">
           專業團隊，為你打造獨一無二的 IP 商品
         </Heading>
-        <Stack w="90%" py="32px" spacing="24px" direction="row">
+        <Stack
+          // w="90%"
+          maxWidth="1024px"
+          py="32px"
+          spacing="32px"
+          direction={{ base: 'column', lg: 'row' }}
+        >
           {features.map((feature, index) => (
-            <CardFeature {...feature} ket={feature.title} />
+            <CardFeature {...feature} key={feature.title} />
           ))}
         </Stack>
         <Stack w="100%" spacing="60px" direction="column" py="32px">

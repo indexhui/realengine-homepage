@@ -41,6 +41,7 @@ const SectionPartner = () => {
         >
           {partners.map(partner => (
             <Flex
+              key={partner.name}
               w={{ base: '50%', lg: 'auto' }}
               filter="opacity(.5)"
               transition="opacity .5s"

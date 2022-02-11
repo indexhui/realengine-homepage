@@ -14,9 +14,9 @@ function App() {
       <Header />
       <Hero />
       <SectionPartner />
-      <SectionFeatures />
+      {/* <SectionFeatures />
       <SectionRecommend />
-      <SectionFeedBack />
+      <SectionFeedBack /> */}
     </ChakraProvider>
   );
 }
