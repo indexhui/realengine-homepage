@@ -1,0 +1,109 @@
+import { Flex, Stack, Box, Image, Heading, Text } from '@chakra-ui/react';
+
+import useSpace from '../hooks/useSpace';
+import Content from '../components/homepage/Content';
+
+import trophy from '../assets/images/trophy.png';
+import rocket from '../assets/images/rocket.png';
+import gear from '../assets/images/gear.png';
+import sealDemo from '../assets/images/seal_demo.jpg';
+import profit from '../assets/images/profit.png';
+import mrDoumiaoProduct from '../assets/images/mr_doumiao_product.jpg';
+import analyze from '../assets/images/analyze.png';
+
+const features = [
+  {
+    title: '國際級產品化團隊',
+    content:
+      '由台灣唯一獲得【德國埃森桌遊展】大會邀約，並為【大英博物館】指定合作夥伴，國際級的遊戲開發團隊參與執行。',
+    image: trophy,
+  },
+  {
+    title: '真實引擎遊戲加速器',
+    content:
+      '首創 Real Engine Core (真實引擎遊戲加速器)，最高節省 80% 的遊戲開發時間，為合作雙方創造最高效益價值。',
+    image: rocket,
+  },
+  {
+    title: '真實引擎數位平台',
+    content:
+      '為創作者打造 Real Engine Digital (真實引擎數位平台)，提供獨家粉絲洞察報告，建立長遠經營效益。',
+    image: gear,
+  },
+];
+
+const benefits = [
+  {
+    title: '個性商品',
+    content: '用桌上遊戲引領出 IP 作品的獨特性，包含角色、故事、世界觀等元素。',
+    image: sealDemo,
+  },
+  {
+    title: '優質分潤',
+    content:
+      '打破傳統的平面化授權分潤，採用深度參與、價值共享的平台化合作機制。',
+    image: profit,
+  },
+  {
+    title: '品牌建立',
+    content:
+      '透過個性化商品與深度互動，周邊開發不再消耗粉絲熱情，而是建立品牌價值。',
+    image: mrDoumiaoProduct,
+  },
+  {
+    title: '粉絲洞察',
+    content:
+      '合作過程中，真實引擎將為 IP 作品的「消費型粉絲」建立完整的洞察報告，讓創作者未來經營可以走得更穩健。',
+    image: analyze,
+  },
+];
+
+const CardFeature = props => {
+  return (
+    <Flex
+      w="30%"
+      align="center"
+      justify="center"
+      px="20px"
+      direction="column"
+      py="30px"
+      rounded="sm"
+      boxShadow="0 3px 10px 0 rgb(38 59 94 / 10%)"
+      _hover={{ boxShadow: '0 30px 60px 0 rgb(38 59 94 / 10%)' }}
+      transition="box-shadow .5s"
+    >
+      <Heading as="h4" color="#3D3D3D" fontSize="20px">
+        {props.title}
+      </Heading>
+      <Text color="#6a7697" pt="12px" pb="16px" lineHeight="1.75">
+        {props.content}
+      </Text>
+      <Image src={props.image} alt={props.title} />
+    </Flex>
+  );
+};
+
+const SectionFeatures = () => {
+  const { space } = useSpace();
+  return (
+    <Flex w="100%" justify="center" py="50px" px="20px">
+      <Flex w={space} justify="center" align="center" direction="column">
+        <Heading as="h2" color="#3D3D3D">
+          專業團隊，為你打造獨一無二的 IP 商品
+        </Heading>
+        <Stack w="90%" py="32px" spacing="24px" direction="row">
+          {features.map((feature, index) => (
+            <CardFeature {...feature} ket={feature.title} />
+          ))}
+        </Stack>
+        <Stack w="100%" spacing="60px" direction="column" py="32px">
+          {benefits.map((benefit, index) => (
+            <Content key={benefit.title} {...benefit} index={index} />
+          ))}
+        </Stack>
+      </Flex>
+    </Flex>
+  );
+};
+
+export default SectionFeatures;
