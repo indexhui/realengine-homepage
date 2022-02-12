@@ -1,7 +1,10 @@
 import { Flex, Stack, Box, Image, Heading, Text } from '@chakra-ui/react';
 
 import useSpace from '../hooks/useSpace';
+import RevealFlex from '../components/homepage/RevealFlex';
+
 import Content from '../components/homepage/Content';
+import CardFeature from '../components/homepage/CardFeature';
 
 import trophy from '../assets/images/trophy.png';
 import rocket from '../assets/images/rocket.png';
@@ -58,51 +61,54 @@ const benefits = [
   },
 ];
 
-const CardFeature = props => {
-  return (
-    <Flex
-      w={{ base: '100%', lg: '30%' }}
-      align="center"
-      justify="center"
-      px="24px"
-      direction="column"
-      py="36px"
-      rounded="sm"
-      boxShadow="0 3px 10px 0 rgb(38 59 94 / 10%)"
-      _hover={{ boxShadow: '0 30px 60px 0 rgb(38 59 94 / 10%)' }}
-      transition="box-shadow .5s"
-    >
-      <Heading as="h4" color="#3D3D3D" fontSize="20px">
-        {props.title}
-      </Heading>
-      <Text color="#6a7697" pt="12px" pb="16px" lineHeight="1.75">
-        {props.content}
-      </Text>
-      <Image src={props.image} alt={props.title} />
-    </Flex>
-  );
-};
+// const CardFeature = props => {
+//   return (
+//     <Flex
+//       w={{ base: '100%', lg: '30%' }}
+//       align="center"
+//       justify="center"
+//       px="24px"
+//       direction="column"
+//       py="36px"
+//       rounded="sm"
+//       boxShadow="0 3px 10px 0 rgb(38 59 94 / 10%)"
+//       _hover={{ boxShadow: '0 30px 60px 0 rgb(38 59 94 / 10%)' }}
+//       transition="box-shadow .5s"
+//     >
+//       <Heading as="h4" color="#3D3D3D" fontSize="20px">
+//         {props.title}
+//       </Heading>
+//       <Text color="#6a7697" pt="12px" pb="16px" lineHeight="1.75">
+//         {props.content}
+//       </Text>
+//       <Image src={props.image} alt={props.title} />
+//     </Flex>
+//   );
+// };
 
 const SectionFeatures = () => {
   const { space } = useSpace();
   return (
     <Flex w="100%" justify="center" py="50px" px="20px">
       <Flex w={space} justify="center" align="center" direction="column">
-        <Heading as="h2" color="#3D3D3D">
-          專業團隊，為你打造獨一無二的 IP 商品
-        </Heading>
+        <RevealFlex>
+          <Heading as="h2" color="#3D3D3D">
+            專業團隊，為你打造獨一無二的 IP 商品
+          </Heading>
+        </RevealFlex>
+        {/* features */}
         <Stack
-          // w="90%"
           maxWidth="1024px"
           py="32px"
           spacing="32px"
           direction={{ base: 'column', lg: 'row' }}
         >
           {features.map((feature, index) => (
-            <CardFeature {...feature} key={feature.title} />
+            <CardFeature order={index} {...feature} key={feature.title} />
           ))}
         </Stack>
-        <Stack w="100%" spacing="60px" direction="column" py="32px">
+        {/* benefits */}
+        <Stack w="100%" spacing="100px" direction="column" py="32px">
           {benefits.map((benefit, index) => (
             <Content key={benefit.title} {...benefit} index={index} />
           ))}

@@ -1,4 +1,5 @@
 import { Flex, Box, Image, Heading, Text } from '@chakra-ui/react';
+import RevealFlex from './RevealFlex';
 
 const Content = props => {
   return (
@@ -8,9 +9,14 @@ const Content = props => {
       direction={props.index % 2 === 0 ? 'row' : 'row-reverse'}
     >
       <Flex w={{ base: '100%', lg: '50%' }}>
-        <Box w="100%" h="300px" overflow="hidden" mr="10%">
+        <Box
+          w="100%"
+          h={{ base: '220px', lg: '300px' }}
+          overflow="hidden"
+          mr={{ base: '0', lg: '10%' }}
+        >
           <Image
-            _hover={{ transform: 'scale(1.1)' }}
+            _hover={{ transform: 'scale(1)' }}
             transform="scale(1.25)"
             transition="transform .5s"
             src={props.image}
@@ -19,17 +25,27 @@ const Content = props => {
         </Box>
       </Flex>
       <Flex
-        w={{ base: '100%', lg: '50%' }}
         direction="column"
         justify="center"
-        px="55px"
+        w={{ base: '100%', lg: '50%' }}
+        px={{ base: '0px', lg: '55px' }}
       >
-        <Heading as="h3" color="#263b5e" fontSize="36px" pb="20px">
-          {props.title}
-        </Heading>
-        <Text fontSize="22px" lineHeight="36px">
-          {props.content}
-        </Text>
+        <RevealFlex>
+          <Heading
+            as="h3"
+            color="#263b5e"
+            fontSize="36px"
+            pb="20px"
+            pt={{ base: '32px', lg: '0' }}
+          >
+            {props.title}
+          </Heading>
+        </RevealFlex>
+        <RevealFlex y="35" duration="1">
+          <Text fontSize="22px" lineHeight="36px">
+            {props.content}
+          </Text>
+        </RevealFlex>
       </Flex>
     </Flex>
   );

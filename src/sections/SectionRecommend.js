@@ -74,6 +74,7 @@ const SectionRecommend = () => {
   const settings = {
     dots: true,
     infinite: true,
+    autoplay: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -89,14 +90,22 @@ const SectionRecommend = () => {
         <ul style={{ margin: '0px' }}> {dots} </ul>
       </div>
     ),
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+        },
+      },
+    ],
   };
   return (
-    <Flex w="100%" justify="center" py="40px">
+    <Flex w="100%" justify="center" py="40px" px="20px">
       <Flex w={space} align="center" direction="column">
         <Heading>創作者推薦</Heading>
         <Text py="20px">真實引擎位與每一位創作者建立合作夥伴關係</Text>
         <Flex
-          w="75%"
+          w={{ base: '100%', lg: '75%' }}
           py="30px"
           pb="48px"
           justify="center"

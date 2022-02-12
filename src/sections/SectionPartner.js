@@ -1,5 +1,6 @@
 import { Flex, Image, Heading, Grid } from '@chakra-ui/react';
 import useSpace from '../hooks/useSpace';
+import RevealFlex from '../components/homepage/RevealFlex';
 
 import mirrorFiction from '../assets/images/mirror_fiction.png';
 import theNothingSeal from '../assets/images/the_nothing_seal.png';
@@ -30,9 +31,11 @@ const SectionPartner = () => {
   return (
     <Flex w="100%" justify="center" pt="60px">
       <Flex w={space} justify="center" align="center" direction="column">
-        <Heading as="h2" color="#3D3D3D">
-          合作夥伴
-        </Heading>
+        <RevealFlex>
+          <Heading as="h2" color="#3D3D3D">
+            合作夥伴
+          </Heading>
+        </RevealFlex>
         <Flex
           wrap="wrap"
           my="32px"

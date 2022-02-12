@@ -6,6 +6,7 @@ import { Flex, Image, Heading, Text, Icon } from '@chakra-ui/react';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 import useSpace from '../hooks/useSpace';
+import CardFeedback from '../components/homepage/CardFeedback';
 
 const PrevArrow = props => {
   const { onClick } = props;
@@ -73,10 +74,19 @@ const SectionFeedback = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
+    responsive: [
+      {
+        breakpoint: 400,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+        },
+      },
+    ],
   };
 
   return (
@@ -93,7 +103,17 @@ const SectionFeedback = () => {
               borderRadius: '5px',
             }}
           >
-            <Flex w="100%">
+            <CardFeedback />
+            <CardFeedback />
+            <CardFeedback />
+            <CardFeedback />
+            <CardFeedback />
+            {/* <CardFeedback />
+            <CardFeedback />
+            <CardFeedback />
+            <CardFeedback />
+            <CardFeedback /> */}
+            {/* <Flex w="100%">
               <Flex w="100%" justify="center">
                 <Flex
                   w="260px"
@@ -184,7 +204,7 @@ const SectionFeedback = () => {
                   </Text>
                 </Flex>
               </Flex>
-            </Flex>
+            </Flex> */}
           </Slider>
         </Flex>
       </Flex>
