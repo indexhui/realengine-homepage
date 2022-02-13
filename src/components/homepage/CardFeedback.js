@@ -6,8 +6,7 @@ const CardFeedback = () => {
     <Flex w="100%">
       <Flex w="100%" justify="center">
         <Flex
-          w="260px"
-          // w="70%"
+          w={{ base: '100%', lg: '260px' }}
           align="flex-start"
           zIndex="2"
           bg="white"

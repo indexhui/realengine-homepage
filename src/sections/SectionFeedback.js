@@ -2,10 +2,11 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-import { Flex, Image, Heading, Text, Icon } from '@chakra-ui/react';
+import { Flex, Heading, Text, Icon } from '@chakra-ui/react';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 import useSpace from '../hooks/useSpace';
+import RevealFlex from '../components/homepage/RevealFlex';
 import CardFeedback from '../components/homepage/CardFeedback';
 
 const PrevArrow = props => {
@@ -90,11 +91,20 @@ const SectionFeedback = () => {
   };
 
   return (
-    <Flex w="100%" justify="center" py="40px">
+    <Flex w="100%" justify="center" py="40px" px="20px">
       <Flex w={space} align="center" direction="column">
-        <Heading>粉絲回饋</Heading>
-        <Text py="20px">真實引擎的專案合作，喚起粉絲最深的情感連結</Text>
-        <Flex w="75%" py="20px" pb="48px" justify="center">
+        <RevealFlex>
+          <Heading>粉絲回饋</Heading>
+        </RevealFlex>
+        <RevealFlex y="35" duration=".75">
+          <Text py="20px">真實引擎的專案合作，喚起粉絲最深的情感連結</Text>
+        </RevealFlex>
+        <Flex
+          w={{ base: '100%', lg: '75%' }}
+          py="20px"
+          pb="48px"
+          justify="center"
+        >
           <Slider
             {...settings}
             style={{
@@ -108,103 +118,6 @@ const SectionFeedback = () => {
             <CardFeedback />
             <CardFeedback />
             <CardFeedback />
-            {/* <CardFeedback />
-            <CardFeedback />
-            <CardFeedback />
-            <CardFeedback />
-            <CardFeedback /> */}
-            {/* <Flex w="100%">
-              <Flex w="100%" justify="center">
-                <Flex
-                  w="260px"
-                  // w="70%"
-                  align="center"
-                  zIndex="2"
-                  bg="white"
-                  p="20px"
-                  m="20px"
-                  direction="column"
-                  rounded="sm"
-                  boxShadow="0 20px 40px 0 rgb(12 0 46 / 6%)"
-                >
-                  <Heading as="h4" fontSize="20px" pt="18px" pb="10px">
-                    豆苗先生
-                  </Heading>
-                  <Text maxW="400px" textAlign="center">
-                    能夠協助創作者作出完善的桌遊規劃，從零也可以跟著做，是值得信任ㄉ好夥伴。
-                  </Text>
-                </Flex>
-              </Flex>
-            </Flex>
-            <Flex w="100%">
-              <Flex w="100%" justify="center">
-                <Flex
-                  w="260px"
-                  // w="70%"
-                  align="center"
-                  zIndex="2"
-                  bg="white"
-                  p="20px"
-                  m="20px"
-                  direction="column"
-                  rounded="sm"
-                  boxShadow="0 20px 40px 0 rgb(12 0 46 / 6%)"
-                >
-                  <Heading as="h4" fontSize="20px" pt="18px" pb="10px">
-                    豆苗先生
-                  </Heading>
-                  <Text maxW="400px" textAlign="center">
-                    能夠協助創作者作出完善的桌遊規劃，從零也可以跟著做，是值得信任ㄉ好夥伴。
-                  </Text>
-                </Flex>
-              </Flex>
-            </Flex>
-            <Flex w="100%">
-              <Flex w="100%" justify="center">
-                <Flex
-                  w="260px"
-                  // w="70%"
-                  align="center"
-                  zIndex="2"
-                  bg="white"
-                  p="20px"
-                  m="20px"
-                  direction="column"
-                  rounded="sm"
-                  boxShadow="0 20px 40px 0 rgb(12 0 46 / 6%)"
-                >
-                  <Heading as="h4" fontSize="20px" pt="18px" pb="10px">
-                    豆苗先生
-                  </Heading>
-                  <Text maxW="400px" textAlign="center">
-                    能夠協助創作者作出完善的桌遊規劃，從零也可以跟著做，是值得信任ㄉ好夥伴。
-                  </Text>
-                </Flex>
-              </Flex>
-            </Flex>
-            <Flex w="100%">
-              <Flex w="100%" justify="center">
-                <Flex
-                  w="260px"
-                  // w="70%"
-                  align="center"
-                  zIndex="2"
-                  bg="white"
-                  p="20px"
-                  m="20px"
-                  direction="column"
-                  rounded="sm"
-                  boxShadow="0 20px 40px 0 rgb(12 0 46 / 6%)"
-                >
-                  <Heading as="h4" fontSize="20px" pt="18px" pb="10px">
-                    豆苗先生
-                  </Heading>
-                  <Text maxW="400px" textAlign="center">
-                    能夠協助創作者作出完善的桌遊規劃，從零也可以跟著做，是值得信任ㄉ好夥伴。
-                  </Text>
-                </Flex>
-              </Flex>
-            </Flex> */}
           </Slider>
         </Flex>
       </Flex>

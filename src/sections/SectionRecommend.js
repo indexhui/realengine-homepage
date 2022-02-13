@@ -2,8 +2,9 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-import { Flex, Box, Image, Heading, Text, Icon } from '@chakra-ui/react';
+import { Flex, Image, Heading, Text, Icon } from '@chakra-ui/react';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+import RevealFlex from '../components/homepage/RevealFlex';
 
 import useSpace from '../hooks/useSpace';
 import doumiao from '../assets/images/doumiao.jfif';
@@ -102,8 +103,12 @@ const SectionRecommend = () => {
   return (
     <Flex w="100%" justify="center" py="40px" px="20px">
       <Flex w={space} align="center" direction="column">
-        <Heading>創作者推薦</Heading>
-        <Text py="20px">真實引擎位與每一位創作者建立合作夥伴關係</Text>
+        <RevealFlex>
+          <Heading>創作者推薦</Heading>
+        </RevealFlex>
+        <RevealFlex y="35" duration=".75">
+          <Text py="20px">真實引擎位與每一位創作者建立合作夥伴關係</Text>
+        </RevealFlex>
         <Flex
           w={{ base: '100%', lg: '75%' }}
           py="30px"
