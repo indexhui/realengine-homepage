@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 import { Flex, Image } from '@chakra-ui/react';
-import logo from '../assets/images/logo.jpg';
+import logo from '../assets/images/logo.webp';
 
 const space = {
   base: '80%',
@@ -41,7 +41,7 @@ const Header = () => {
         }
       >
         <Flex w={space}>
-          <Image src={logo} alt="logo" />
+          <Image src={logo} w="120px" alt="logo" />
         </Flex>
       </Flex>
     </header>
