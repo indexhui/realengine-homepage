@@ -1,7 +1,7 @@
 import { Flex, Image, Heading, Text, Icon } from '@chakra-ui/react';
 import { FaStar } from 'react-icons/fa';
 
-const CardFeedback = () => {
+const CardFeedback = props => {
   return (
     <Flex w="100%">
       <Flex w="100%" justify="center">
@@ -22,13 +22,13 @@ const CardFeedback = () => {
             ))}
           </Flex>
           <Heading as="h4" fontSize="20px" pt="18px">
-            豆苗先生
+            {props.project}
           </Heading>
           <Text maxW="400px" textAlign="left" color="#7b7b93" py="16px">
-            能夠協助創作者作出完善的桌遊規劃，從零也可以跟著做，是值得信任ㄉ好夥伴。
+            {props.feedback}
           </Text>
           <Text color="#909095" fontSize="12px">
-            洪仙
+            {props.name}
           </Text>
         </Flex>
       </Flex>
