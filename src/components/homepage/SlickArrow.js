@@ -14,7 +14,7 @@ const SlickArrow = props => {
       onClick={onClick}
       position="absolute"
       zIndex="1"
-      top="30%"
+      top="40%"
       left={isLeft ? '-60px' : 'auto'}
       right={isLeft ? 'auto' : '-60px'}
       boxShadow="0 20px 30px 0 rgb(12 0 46 / 6%)"
