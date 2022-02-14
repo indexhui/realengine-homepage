@@ -4,6 +4,7 @@ import useSpace from '../hooks/useSpace';
 import RevealFlex from '../components/homepage/RevealFlex';
 import CardFeedback from '../components/homepage/CardFeedback';
 import Slick from '../components/homepage/Slick';
+import Title from '../components/homepage/Title';
 
 const fansFeedback = [
   {
@@ -49,12 +50,10 @@ const SectionFeedback = () => {
   return (
     <Flex w="100%" justify="center" py="40px" px="20px">
       <Flex w={space} align="center" direction="column">
-        <RevealFlex>
-          <Heading>粉絲回饋</Heading>
-        </RevealFlex>
-        <RevealFlex y="35" duration=".75">
-          <Text py="20px">真實引擎的專案合作，喚起粉絲最深的情感連結</Text>
-        </RevealFlex>
+        <Title
+          title="粉絲回饋"
+          subTitle="真實引擎的專案合作，喚起粉絲最深的情感連結"
+        />
         <Flex
           w={{ base: '100%', lg: '75%' }}
           py="20px"

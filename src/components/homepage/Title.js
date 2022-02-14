@@ -11,7 +11,7 @@ const Title = props => {
       </RevealFlex>
       {props.subTitle && (
         <RevealFlex y="35" duration=".75">
-          <Text fontSize="24px" textAlign="center">
+          <Text fontSize={{ base: '15px', lg: '20px' }} textAlign="center">
             {props.subTitle}
           </Text>
         </RevealFlex>

@@ -1,9 +1,10 @@
 import { Flex, Heading, Text } from '@chakra-ui/react';
 
+import useSpace from '../hooks/useSpace';
 import RevealFlex from '../components/homepage/RevealFlex';
 import Slick from '../components/homepage/Slick';
-import useSpace from '../hooks/useSpace';
 import ContentRecommend from '../components/homepage/ContentRecommend';
+import Title from '../components/homepage/Title';
 
 import doumiao from '../assets/images/doumiao.jfif';
 import seal from '../assets/images/seal.jfif';
@@ -48,12 +49,10 @@ const SectionRecommend = () => {
   return (
     <Flex w="100%" justify="center" py="40px" px="20px">
       <Flex w={space} align="center" direction="column">
-        <RevealFlex>
-          <Heading>創作者推薦</Heading>
-        </RevealFlex>
-        <RevealFlex y="35" duration=".75">
-          <Text py="20px">真實引擎位與每一位創作者建立合作夥伴關係</Text>
-        </RevealFlex>
+        <Title
+          title="創作者推薦"
+          subTitle="真實引擎位與每一位創作者建立合作夥伴關係"
+        />
         <Flex
           w={{ base: '100%', lg: '75%' }}
           py="30px"
