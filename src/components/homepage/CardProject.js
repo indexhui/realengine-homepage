@@ -16,21 +16,29 @@ const CardProject = props => {
         <Image />
       </Box>
       <Text color="#1DA4AF" fontSize="14px">
-        街頭故事
+        {props.owner}
       </Text>
       <Text fontSize="20px" fontWeight="700">
-        小故事|創造屬於你的旅程
+        {props.name}
       </Text>
       {props.finished ? (
         <Flex direction="column" pt="50px">
-          <Text>集資套數：1548 套</Text>
-          <Text>目標達成：511%</Text>
+          <Text>集資套數：{props.set} 套</Text>
+          <Text>目標達成：{props.goal}%</Text>
         </Flex>
       ) : (
-        <Flex direction="column">
-          <Text noOfLines={3} py="18px" color="#7b7b93">
-            專案介紹專案介紹專案介紹專案介紹專案介紹專案介紹專案介紹專案介紹專案介紹專案介紹專案介紹專案
-          </Text>
+        <Flex direction="column" flex="1">
+          <Flex flex="1" py="18px">
+            <Text
+              flex="1"
+              noOfLines={3}
+              h="72px"
+              overflow="hidden"
+              color="#7b7b93"
+            >
+              {props.description}
+            </Text>
+          </Flex>
           <Flex justify="space-between">
             <Text>已達成 43 %</Text>
             <Text>還有 13 天</Text>

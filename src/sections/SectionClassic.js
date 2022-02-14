@@ -8,8 +8,8 @@ const fundingProjects = [
   {
     owner: '街頭故事',
     name: '小故事|創造屬於你的旅程',
-    set: 1546,
-    goal: 511,
+    set: 546,
+    goal: 221,
     finished: true,
   },
   {
