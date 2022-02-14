@@ -1,4 +1,4 @@
-import { Flex, Image, Heading, Grid } from '@chakra-ui/react';
+import { Flex, Image, Heading } from '@chakra-ui/react';
 import useSpace from '../hooks/useSpace';
 import RevealFlex from '../components/homepage/RevealFlex';
 

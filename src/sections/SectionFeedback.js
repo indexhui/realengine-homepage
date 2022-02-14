@@ -1,7 +1,6 @@
-import { Flex, Heading, Text } from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react';
 
 import useSpace from '../hooks/useSpace';
-import RevealFlex from '../components/homepage/RevealFlex';
 import CardFeedback from '../components/homepage/CardFeedback';
 import Slick from '../components/homepage/Slick';
 import Title from '../components/homepage/Title';

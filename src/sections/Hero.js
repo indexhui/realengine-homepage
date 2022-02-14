@@ -1,4 +1,4 @@
-import { Flex, VStack, Box, Heading, Button } from '@chakra-ui/react';
+import { Flex, VStack, Box, Heading } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 
 import useSpace from '../hooks/useSpace';

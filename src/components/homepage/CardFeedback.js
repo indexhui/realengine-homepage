@@ -1,4 +1,4 @@
-import { Flex, Image, Heading, Text, Icon } from '@chakra-ui/react';
+import { Flex, Heading, Text, Icon } from '@chakra-ui/react';
 import { FaStar } from 'react-icons/fa';
 
 const CardFeedback = props => {

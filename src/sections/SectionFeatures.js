@@ -1,4 +1,4 @@
-import { Flex, Stack, Box, Image, Heading, Text } from '@chakra-ui/react';
+import { Flex, Stack, Heading } from '@chakra-ui/react';
 
 import useSpace from '../hooks/useSpace';
 import RevealFlex from '../components/homepage/RevealFlex';
