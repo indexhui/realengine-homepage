@@ -65,6 +65,7 @@ const SectionFeedback = () => {
               width: '100%',
               borderRadius: '5px',
             }}
+            dots
           >
             {fansFeedback.map(feedback => (
               <CardFeedback key={feedback.name} {...feedback} />

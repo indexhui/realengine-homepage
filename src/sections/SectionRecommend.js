@@ -26,6 +26,9 @@ const SectionRecommend = () => {
   const { space } = useSpace();
   const settings = {
     slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
     appendDots: dots => (
       <div
         style={{
@@ -50,7 +53,7 @@ const SectionRecommend = () => {
       <Flex w={space} align="center" direction="column">
         <Title
           title="創作者推薦"
-          subTitle="真實引擎位與每一位創作者建立合作夥伴關係"
+          // subTitle="真實引擎成為創作者的合作夥伴"
         />
         <Flex
           w={{ base: '100%', lg: '75%' }}
