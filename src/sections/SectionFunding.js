@@ -50,7 +50,7 @@ const SectionFunding = () => {
       >
         <Title
           title="進行中的集資"
-          subTitle="他們需要你的支持，一起實現夢想吧"
+          // subTitle="他們需要你的支持，一起實現夢想吧"
         />
         <Grid
           w="100%"

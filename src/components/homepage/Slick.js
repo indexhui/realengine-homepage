@@ -7,10 +7,10 @@ import SlickArrow from './SlickArrow';
 const settings = {
   dots: false,
   infinite: true,
-  speed: 500,
-  autoplay: true,
-  slidesToShow: 4,
-  slidesToScroll: 1,
+  speed: 1000,
+  autoplay: false,
+  slidesToShow: 3,
+  slidesToScroll: 3,
   nextArrow: <SlickArrow isLeft={false} />,
   prevArrow: <SlickArrow isLeft={true} />,
   responsive: [
