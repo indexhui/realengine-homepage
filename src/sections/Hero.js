@@ -33,13 +33,13 @@ const Hero = () => {
             width="0"
             bg="#494949"
             color="#494949"
-            h={{ base: '40px', lg: '50px' }}
+            h={{ base: '48px', lg: '60px' }}
             overflow="hidden"
             animate={{ width: 'auto', padding: '0 8px' }}
             transition={{ duration: 0.5 }}
           >
             <MotionHeading
-              fontSize={{ base: '20px', lg: '32px' }}
+              fontSize={{ base: '25px', lg: '38px' }}
               color="white"
               p="8px"
               opacity="0"
@@ -50,6 +50,7 @@ const Hero = () => {
             </MotionHeading>
           </MotionBox>
           <MotionBox position="relative" overflow="hidden">
+            {/* 色塊會根據下方文字寬度變化 */}
             <MotionBox
               w="0%"
               bg="white"
@@ -65,24 +66,24 @@ const Hero = () => {
               bg="#388292"
               opacity="0"
               lineHeight="1.35"
-              fontSize={{ base: '24px', lg: '40px' }}
+              fontSize={{ base: '16px', lg: '30px' }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.65 }}
               color="white"
               maxW="580px"
-              px="20px"
-              py="20px"
+              px={{ base: '15px', lg: '20px' }}
+              py={{ base: '10px', lg: '20px' }}
             >
               透過真實引擎，創作者有效率地開發出個性化的實體桌上遊戲與周邊商品
             </MotionHeading>
           </MotionBox>
-          <MotionBox
+          {/* <MotionBox
             opacity="0"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.65 }}
           >
             <MainButton>合作洽詢</MainButton>
-          </MotionBox>
+          </MotionBox> */}
         </VStack>
       </Flex>
       <Box
