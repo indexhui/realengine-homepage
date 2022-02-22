@@ -22,7 +22,7 @@ const CardProject = props => {
         {props.name}
       </Text>
       {props.finished ? (
-        <Flex direction="column" pt="50px">
+        <Flex flex="1" direction="column" pt="50px" justify="flex-end">
           <Text>集資套數：{props.set} 套</Text>
           <Text>目標達成：{props.goal}%</Text>
         </Flex>
