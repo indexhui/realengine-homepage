@@ -9,6 +9,7 @@ import SectionRecommend from './sections/SectionRecommend';
 import SectionFeedBack from './sections/SectionFeedback';
 import SectionFunding from './sections/SectionFunding';
 import SectionClassic from './sections/SectionClassic';
+import Footer from './sections/Footer';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <SectionFeedBack />
       <SectionFunding />
       <SectionClassic />
+      <Footer />
     </ChakraProvider>
   );
 }

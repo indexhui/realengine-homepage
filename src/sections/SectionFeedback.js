@@ -61,6 +61,9 @@ const SectionFeedback = () => {
         >
           <Slick
             style={{
+              display: 'flex',
+              alignItems: 'stretch',
+              // border: '1px solid blue',
               position: 'relative',
               width: '100%',
               borderRadius: '5px',

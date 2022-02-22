@@ -3,7 +3,7 @@ import { FaStar } from 'react-icons/fa';
 
 const CardFeedback = props => {
   return (
-    <Flex w="100%">
+    <Flex w="100%" flex="1" h={['300px', '340px', '350px', '290px']}>
       <Flex w="100%" justify="center">
         <Flex
           w={{ base: '100%', lg: '260px' }}
@@ -27,9 +27,11 @@ const CardFeedback = props => {
           <Text maxW="400px" textAlign="left" color="#7b7b93" py="16px">
             {props.feedback}
           </Text>
-          <Text color="#909095" fontSize="12px">
-            {props.name}
-          </Text>
+          <Flex flex="1" align="flex-end">
+            <Text color="#909095" fontSize="12px">
+              {props.name}
+            </Text>
+          </Flex>
         </Flex>
       </Flex>
     </Flex>

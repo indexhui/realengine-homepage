@@ -1,4 +1,4 @@
-import { Image, Heading, Text } from '@chakra-ui/react';
+import { Image, Heading, Text, Flex, Box } from '@chakra-ui/react';
 import RevealFlex from './RevealFlex';
 
 const CardFeature = props => {
@@ -17,13 +17,23 @@ const CardFeature = props => {
       _hover={{ boxShadow: '0 30px 60px 0 rgb(38 59 94 / 10%)' }}
       transition="box-shadow .5s"
     >
-      <Heading as="h4" color="#3D3D3D" fontSize="20px">
-        {props.title}
-      </Heading>
-      <Text color="#6a7697" pt="12px" pb="16px" lineHeight="1.75">
-        {props.content}
-      </Text>
-      <Image src={props.image} alt={props.title} />
+      <Flex
+        direction="column"
+        justify="space-between"
+        flex="1"
+        align="center"
+        textAlign="center"
+      >
+        <Box>
+          <Heading as="h4" color="#3D3D3D" fontSize="20px">
+            {props.title}
+          </Heading>
+          <Text color="#6a7697" pt="12px" pb="16px" lineHeight="1.75">
+            {props.content}
+          </Text>
+        </Box>
+        <Image h="100px" w="100px" src={props.image} alt={props.title} />
+      </Flex>
     </RevealFlex>
   );
 };
