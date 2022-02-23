@@ -1,8 +1,22 @@
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import styled from '@emotion/styled';
 
 import SlickArrow from './SlickArrow';
+
+const StyledSlider = styled(Slider)`
+.slick-track {
+  display: flex;
+}
+
+.slick-slide {
+  height: inherit;
+  > div {
+    height: 100%;
+  }
+}
+`
 
 const settings = {
   dots: false,
@@ -26,9 +40,9 @@ const settings = {
 
 const Slick = props => {
   return (
-    <Slider {...settings} {...props}>
+    <StyledSlider {...settings} {...props}>
       {props.children}
-    </Slider>
+    </StyledSlider>
   );
 };
 
