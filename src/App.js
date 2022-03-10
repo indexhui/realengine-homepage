@@ -16,12 +16,13 @@ function App() {
     <ChakraProvider theme={theme}>
       <Header />
       <Hero />
-      <SectionPartner />
+
       <SectionFeatures />
       <SectionRecommend />
       <SectionFeedBack />
       <SectionFunding />
       <SectionClassic />
+      <SectionPartner />
       <Footer />
     </ChakraProvider>
   );

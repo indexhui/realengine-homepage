@@ -10,7 +10,7 @@ import {
 import { FaFacebookF, FaInstagram, FaLine } from 'react-icons/fa';
 
 import useSpace from '../hooks/useSpace';
-import logo from '../assets/images/logo.webp';
+import logo from '../assets/images/logo_w.svg';
 
 const socialMediaLink = [
   {

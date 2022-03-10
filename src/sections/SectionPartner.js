@@ -29,7 +29,7 @@ const partners = [
 const SectionPartner = () => {
   const { space } = useSpace();
   return (
-    <Flex w="100%" justify="center" pt="60px">
+    <Flex w="100%" justify="center" py="60px">
       <Flex w={space} justify="center" align="center" direction="column">
         <RevealFlex>
           <Heading as="h2" color="#3D3D3D">
