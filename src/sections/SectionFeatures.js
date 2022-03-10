@@ -1,4 +1,4 @@
-import { Flex, Stack, Heading } from '@chakra-ui/react';
+import { Flex, Stack, Heading, Button } from '@chakra-ui/react';
 
 import useSpace from '../hooks/useSpace';
 import RevealFlex from '../components/homepage/RevealFlex';
@@ -82,8 +82,11 @@ const SectionFeatures = () => {
             <CardFeature order={index} {...feature} key={feature.title} />
           ))}
         </Stack>
+        <Button variant="outline" size="lg" my="20px" colorScheme="teal">
+          合作洽詢
+        </Button>
         {/* benefits */}
-        <Stack w="100%" spacing="100px" direction="column" py="32px">
+        <Stack w="100%" spacing="100px" direction="column" py="60px">
           {benefits.map((benefit, index) => (
             <Content key={benefit.title} {...benefit} index={index} />
           ))}

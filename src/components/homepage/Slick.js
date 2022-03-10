@@ -6,17 +6,17 @@ import styled from '@emotion/styled';
 import SlickArrow from './SlickArrow';
 
 const StyledSlider = styled(Slider)`
-.slick-track {
-  display: flex;
-}
-
-.slick-slide {
-  height: inherit;
-  > div {
-    height: 100%;
+  .slick-track {
+    display: flex;
   }
-}
-`
+
+  .slick-slide {
+    height: inherit;
+    > div {
+      height: 100%;
+    }
+  }
+`;
 
 const settings = {
   dots: false,
@@ -29,7 +29,7 @@ const settings = {
   prevArrow: <SlickArrow isLeft={true} />,
   responsive: [
     {
-      breakpoint: 400,
+      breakpoint: 600,
       settings: {
         slidesToShow: 1,
         arrows: false,

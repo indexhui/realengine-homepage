@@ -7,6 +7,7 @@ import SectionPartner from './sections/SectionPartner';
 import SectionFeatures from './sections/SectionFeatures';
 import SectionRecommend from './sections/SectionRecommend';
 import SectionFeedBack from './sections/SectionFeedback';
+import SectionHotFunding from './sections/SectionHotFunding';
 import SectionFunding from './sections/SectionFunding';
 import SectionClassic from './sections/SectionClassic';
 import Footer from './sections/Footer';
@@ -21,6 +22,7 @@ function App() {
       <SectionRecommend />
       <SectionFeedBack />
       <SectionFunding />
+      <SectionHotFunding />
       <SectionClassic />
       <SectionPartner />
       <Footer />
