@@ -61,35 +61,6 @@ const SectionContact = () => {
     memo: 'memo',
   });
 
-  // const fields = [
-  //   {
-  //     field: 'brand',
-  //     label: '公司/角色名稱',
-  //     validate: {
-  //       minLength: {
-  //         value: 4,
-  //         message: 'Minimum length should be 4',
-  //       },
-  //     },
-  //   },
-  //   {
-  //     field: 'name',
-  //     label: '姓名',
-  //   },
-  //   {
-  //     field: 'phone',
-  //     label: '電話',
-  //   },
-  //   {
-  //     field: 'mail',
-  //     label: '信箱',
-  //   },
-  //   {
-  //     field: 'media',
-  //     label: '社群網址/網站',
-  //   },
-  // ];
-
   function onSubmit(values) {
     return new Promise(resolve => {
       setTimeout(() => {
@@ -236,8 +207,6 @@ const SectionContact = () => {
             </Button>
           </Flex>
         </form>
-
-        {/* <Box w="100%" h="1px" bg="rgba(255,255,255,.2)" mt="60px"></Box> */}
       </Flex>
     </Flex>
   );
