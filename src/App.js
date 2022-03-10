@@ -10,6 +10,7 @@ import SectionFeedBack from './sections/SectionFeedback';
 import SectionHotFunding from './sections/SectionHotFunding';
 import SectionFunding from './sections/SectionFunding';
 import SectionClassic from './sections/SectionClassic';
+import SectionContact from './sections/SectionContact';
 import Footer from './sections/Footer';
 
 function App() {
@@ -17,7 +18,6 @@ function App() {
     <ChakraProvider theme={theme}>
       <Header />
       <Hero />
-
       <SectionFeatures />
       <SectionRecommend />
       <SectionFeedBack />
@@ -25,6 +25,7 @@ function App() {
       <SectionHotFunding />
       <SectionClassic />
       <SectionPartner />
+      <SectionContact />
       <Footer />
     </ChakraProvider>
   );

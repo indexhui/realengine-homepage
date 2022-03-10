@@ -66,7 +66,6 @@ const SectionClassic = () => {
         <Flex
           w="100%"
           // w={{ base: '100%', lg: '75%' }}
-          py="20px"
           pb="48px"
           justify="center"
         >
