@@ -8,6 +8,7 @@ import {
   Link,
 } from '@chakra-ui/react';
 import { FaFacebookF, FaInstagram, FaLine } from 'react-icons/fa';
+import { useMemo } from 'react';
 
 import useSpace from '../hooks/useSpace';
 import logo from '../assets/images/logo_w.svg';
@@ -29,6 +30,7 @@ const socialMediaLink = [
 
 const Footer = () => {
   const { space } = useSpace();
+  const year = useMemo(() => new Date().getFullYear(), [])
   return (
     <Flex
       bg="#1B9AA6"
@@ -41,16 +43,14 @@ const Footer = () => {
       <Flex w={space} px={{ base: '0', lg: '100px' }}>
         <VStack direction="column" align="flex-start" spacing="2px">
           <Image w="120px" src={logo} mb="20px" />
-          <Text>110臺北市信義區嘉興街181巷9弄54號1樓</Text>
+          <Text>106 台北市復興南路一段352號5樓</Text>
           <Text>
-            1F., No. 54, Aly. 9, Ln. 181, Jiaxing St., Xinyi Dist., Taipei City
-            11053, Taiwan
+            5F., No. 352, Sec. 1, Fuxing S. Rd., Da’an Dist., Taipei City 106 , Taiwan
           </Text>
           <HStack py="15px" spacing="20px">
             {socialMediaLink.map((item, index) => (
-              <Link href={item.link} isExternal>
+              <Link href={item.link} isExternal key={index}>
                 <Flex
-                  key={index}
                   w="50px"
                   h="50px"
                   align="center"
@@ -69,7 +69,7 @@ const Footer = () => {
               </Link>
             ))}
           </HStack>
-          <Text opacity=".9">Copyright © 2022. All rights reserved.</Text>
+          <Text opacity=".9">Copyright © {year}. All rights reserved.</Text>
         </VStack>
       </Flex>
     </Flex>

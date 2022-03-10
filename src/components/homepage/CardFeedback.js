@@ -3,35 +3,33 @@ import { FaStar } from 'react-icons/fa';
 
 const CardFeedback = props => {
   return (
-    <Flex w="100%" flex="1" h={['300px', '340px', '350px', '290px']}>
-      <Flex w="100%" justify="center">
-        <Flex
-          w={{ base: '100%', lg: '260px' }}
-          align="flex-start"
-          zIndex="2"
-          bg="white"
-          p="20px"
-          m="20px"
-          direction="column"
-          rounded="sm"
-          boxShadow="0 20px 40px 0 rgb(12 0 46 / 6%)"
-        >
-          <Flex>
-            {Array.apply(null, new Array(5)).map((_, index) => (
-              <Icon as={FaStar} key={index} size="20px" color="#f5c10d" />
-            ))}
-          </Flex>
-          <Heading as="h4" fontSize="20px" pt="18px">
-            {props.project}
-          </Heading>
-          <Text maxW="400px" textAlign="left" color="#7b7b93" py="16px">
-            {props.feedback}
+    <Flex h="100%" justify="center">
+      <Flex
+        w={{ base: '100%', lg: '260px' }}
+        align="flex-start"
+        zIndex="2"
+        bg="white"
+        p="20px"
+        m="20px"
+        direction="column"
+        rounded="sm"
+        boxShadow="0 20px 40px 0 rgb(12 0 46 / 6%)"
+      >
+        <Flex>
+          {Array.apply(null, new Array(5)).map((_, index) => (
+            <Icon as={FaStar} key={index} size="20px" color="#f5c10d" />
+          ))}
+        </Flex>
+        <Heading as="h4" fontSize="20px" pt="18px">
+          {props.project}
+        </Heading>
+        <Text maxW="400px" textAlign="left" color="#7b7b93" py="16px">
+          {props.feedback}
+        </Text>
+        <Flex flex="1" align="flex-end">
+          <Text color="#909095" fontSize="12px">
+            {props.name}
           </Text>
-          <Flex flex="1" align="flex-end">
-            <Text color="#909095" fontSize="12px">
-              {props.name}
-            </Text>
-          </Flex>
         </Flex>
       </Flex>
     </Flex>
