@@ -5,7 +5,13 @@ const Title = props => {
   return (
     <Flex direction="column" align="center" py="40px">
       <RevealFlex>
-        <Heading as="h4" fontSize="36px" fontWeight="bold" mb={4}>
+        <Heading
+          as="h4"
+          fontSize="36px"
+          fontWeight="bold"
+          mb={4}
+          color="#1b9aa6"
+        >
           {props.title}
         </Heading>
       </RevealFlex>

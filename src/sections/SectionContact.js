@@ -74,6 +74,13 @@ const workFields = [
   },
 ];
 
+const charactors = [
+  {
+    field: 'creator',
+    label: '個人創作者',
+  },
+];
+
 const stateOptions = {
   creator: [
     '還沒有想法，希望共同開發自己的桌遊',
@@ -128,7 +135,6 @@ const fromWhere = {
 };
 
 const SectionContact = () => {
-  // const [character, setCharacter] = useState('ww');
   const { space } = useSpace();
 
   const {

@@ -11,6 +11,7 @@ import SectionHotFunding from './sections/SectionHotFunding';
 import SectionFunding from './sections/SectionFunding';
 import SectionClassic from './sections/SectionClassic';
 import SectionContact from './sections/SectionContact';
+import Member from './sections/member/Member';
 import Footer from './sections/Footer';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
       <SectionHotFunding />
       <SectionClassic />
       <SectionPartner />
+      <Member />
       <SectionContact />
       <Footer />
     </ChakraProvider>

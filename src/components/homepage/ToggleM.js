@@ -37,8 +37,6 @@ export const ToggleM = forwardRef(
       defaultValue,
     });
 
-    console.log(field);
-
     const { getRootProps, getRadioProps } = useRadioGroup({
       ...field,
     });

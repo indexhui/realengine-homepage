@@ -4,7 +4,7 @@ const useSpace = () => {
     md: '90%',
     lg: '80%',
     xl: '960px',
-    '2xl': '1180px',
+    '2xl': '1360px',
   };
   return {
     space,
