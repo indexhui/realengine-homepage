@@ -1,7 +1,8 @@
-import { Flex, Grid, GridItem } from '@chakra-ui/react';
+import { Flex, Grid, GridItem, Text } from '@chakra-ui/react';
 import useSpace from '../../hooks/useSpace';
 
 import MemberCard from './MemberCard';
+import DecorationTitle from '../../components/homepage/DecorationTitle';
 
 import renddi from '../../assets/images/member/renddi.jpg';
 import lin from '../../assets/images/member/lin@2x.webp';
@@ -45,8 +46,24 @@ const MemberList = [
 const Member = () => {
   const { space } = useSpace();
   return (
-    <Flex w="100%" justify="center" bg="#f0f0f0" py="100px">
-      <Flex w="80%">
+    <Flex
+      w="100%"
+      justify="center"
+      bg="#f0f0f0"
+      pb="100px"
+      direction="column"
+      align="center"
+    >
+      <DecorationTitle subTitle="「如果有人給你一個火箭上的座位，別問位子在哪，上火箭就對了！」">
+        合作夥伴
+      </DecorationTitle>
+
+      <Text maxW="940px" textAlign="center" fontSize="30px" fontWeight="bold">
+        真實引擎股份有限公司是一間於 2021
+        年成立的新創團隊，主要服務是打造專屬創作者、KOL的「品牌經營變現」系統。在真實引擎中，我們期待每一位成員盡情發揮專業、並且不斷尋找自我突破的成長機會，打造出高效率、獨立自主、兼具創新與靈活的精緻團隊。
+      </Text>
+
+      <Flex w="80%" py="75px">
         <Grid
           templateColumns={{ base: 'repeat(1,,fr)', lg: 'repeat(3, 1fr)' }}
           gap={10}

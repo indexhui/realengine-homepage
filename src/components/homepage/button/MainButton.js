@@ -9,6 +9,7 @@ const MainButton = props => {
       color="white"
       borderRadius="0"
       _hover={{ bg: '#0C5A6A' }}
+      {...props}
     >
       {props.children}
     </Button>
