@@ -1,27 +1,33 @@
 {
   "files": {
     "main.css": "/realengine-homepage/static/css/main.952306d4.css",
-    "main.js": "/realengine-homepage/static/js/main.3ba867f4.js",
+    "main.js": "/realengine-homepage/static/js/main.2c856b0b.js",
     "static/js/377.14a9a1ab.chunk.js": "/realengine-homepage/static/js/377.14a9a1ab.chunk.js",
     "static/media/hero.mp4": "/realengine-homepage/static/media/hero.731435b0656324cbafa4.mp4",
     "static/media/analyze.png": "/realengine-homepage/static/media/analyze.56dbb6c292bcb7dd0a64.png",
     "static/media/seal_demo.jpg": "/realengine-homepage/static/media/seal_demo.a97446762861a57bf4ea.jpg",
     "static/media/mr_doumiao_product.jpg": "/realengine-homepage/static/media/mr_doumiao_product.0717b001a7ad954f4559.jpg",
+    "static/media/asset-1-3-x@2x.webp": "/realengine-homepage/static/media/asset-1-3-x@2x.afc2360078b74e91ae86.webp",
+    "static/media/asset-3-3-x@2x.webp": "/realengine-homepage/static/media/asset-3-3-x@2x.410f12e4d7d994cafad6.webp",
+    "static/media/asset-2-3-x@2x.webp": "/realengine-homepage/static/media/asset-2-3-x@2x.408e1b929522f6f4b2fc.webp",
+    "static/media/renddi.jpg": "/realengine-homepage/static/media/renddi.4a83fff6acd4dc9e04f0.jpg",
+    "static/media/lin@2x.webp": "/realengine-homepage/static/media/lin@2x.43a385ef497fc0c0a7da.webp",
     "static/media/logo.webp": "/realengine-homepage/static/media/logo.6ec382525ddba0c8cfb2.webp",
     "static/media/seal.jfif": "/realengine-homepage/static/media/seal.1558d3c726dcedd64e50.jfif",
     "static/media/logo_w.svg": "/realengine-homepage/static/media/logo_w.d1483d20f12218419045131ecda3e7d0.svg",
     "static/media/doumiao.jfif": "/realengine-homepage/static/media/doumiao.bc4d5f246a58fb5ac1a2.jfif",
+    "static/media/xx.webp": "/realengine-homepage/static/media/xx.7feeb378a7dfc4ddb332.webp",
     "static/media/slick.svg": "/realengine-homepage/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/realengine-homepage/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/realengine-homepage/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/realengine-homepage/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/realengine-homepage/index.html",
     "main.952306d4.css.map": "/realengine-homepage/static/css/main.952306d4.css.map",
-    "main.3ba867f4.js.map": "/realengine-homepage/static/js/main.3ba867f4.js.map",
+    "main.2c856b0b.js.map": "/realengine-homepage/static/js/main.2c856b0b.js.map",
     "377.14a9a1ab.chunk.js.map": "/realengine-homepage/static/js/377.14a9a1ab.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.952306d4.css",
-    "static/js/main.3ba867f4.js"
+    "static/js/main.2c856b0b.js"
   ]
 }
