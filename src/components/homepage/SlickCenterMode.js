@@ -18,26 +18,29 @@ const StyledSlider = styled(Slider)`
   }
   .slick-dots li button:before {
     color: rgba(0, 0, 0, 0);
-    border: 1px solid white;
+    border: 1px solid #686868;
     border-radius: 50px;
     opacity: 1 !important;
     padding: 0px !important;
   }
   .slick-dots li.slick-active button:before {
     padding: 0px !important;
-    background: white;
+    background: #686868;
   }
 `;
 
 const settings = {
-  dots: false,
+  dots: true,
   infinite: true,
   speed: 1000,
   autoplay: false,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  nextArrow: <SlickArrow isLeft={false} />,
-  prevArrow: <SlickArrow isLeft={true} />,
+  slidesToShow: 2,
+  slidesToScroll: 2,
+  centerPadding: '20%',
+  centerMode: true,
+  arrows: false,
+  // nextArrow: <SlickArrow isLeft={false} />,
+  // prevArrow: <SlickArrow isLeft={true} />,
   responsive: [
     {
       breakpoint: 600,

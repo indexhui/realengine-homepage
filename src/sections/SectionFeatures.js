@@ -79,7 +79,7 @@ const benefits = [
 const SectionFeatures = () => {
   const { space } = useSpace();
   return (
-    <Flex w="100%" align="center" pb="100px" bg="#fffef9" direction="column">
+    <Flex w="100%" align="center" bg="#fffef9" direction="column">
       <DecorationTitle>專業團隊，為你打造獨一無二的 IP 遊戲</DecorationTitle>
       <Flex
         w="90%"

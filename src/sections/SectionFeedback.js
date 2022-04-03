@@ -2,8 +2,8 @@ import { Flex } from '@chakra-ui/react';
 
 import useSpace from '../hooks/useSpace';
 import CardFeedback from '../components/homepage/CardFeedback';
-import Slick from '../components/homepage/Slick';
-import Title from '../components/homepage/Title';
+import Slick from '../components/homepage/SlickCenterMode';
+import DecorationTitle from '../components/homepage/DecorationTitle';
 
 const fansFeedback = [
   {
@@ -47,23 +47,14 @@ const SectionFeedback = () => {
   const { space } = useSpace();
 
   return (
-    <Flex w="100%" justify="center" py="40px" px="20px">
-      <Flex w={space} align="center" direction="column">
-        <Title
-          title="粉絲回饋"
-          subTitle="真實引擎的專案合作，喚起粉絲最深的情感連結"
-        />
-        <Flex
-          w={{ base: '100%', lg: '75%' }}
-          py="20px"
-          pb="48px"
-          justify="center"
-        >
+    <Flex w="100%" align="center" direction="column" bg="#fffef9">
+      <DecorationTitle>粉絲回饋</DecorationTitle>
+      <Flex w="100%" align="center" direction="column">
+        <Flex w="100%" py="20px" pb="48px" justify="center">
           <Slick
             style={{
               display: 'flex',
               alignItems: 'stretch',
-              // border: '1px solid blue',
               position: 'relative',
               width: '100%',
               borderRadius: '5px',

@@ -2,6 +2,7 @@ import { Flex } from '@chakra-ui/react';
 
 import useSpace from '../hooks/useSpace';
 import Slick from '../components/homepage/Slick';
+import DecorationTitle from '../components/homepage/DecorationTitle';
 import ContentRecommend from '../components/homepage/ContentRecommend';
 import Title from '../components/homepage/Title';
 
@@ -27,41 +28,41 @@ const SectionRecommend = () => {
   const settings = {
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
+    dots: true,
+    arrows: false,
     autoplaySpeed: 3000,
-    appendDots: dots => (
-      <div
-        style={{
-          borderRadius: '10px',
-          marginBottom: '-10px',
-        }}
-      >
-        <ul style={{ margin: '0px' }}> {dots} </ul>
-      </div>
-    ),
-    responsive: [
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
-        },
-      },
-    ],
+    // appendDots: dots => (
+    //   <div
+    //     style={{
+    //       borderRadius: '10px',
+    //       marginBottom: '-10px',
+    //     }}
+    //   >
+    //     <ul style={{ margin: '0px' }}> {dots} </ul>
+    //   </div>
+    // ),
+    // responsive: [
+    //   {
+    //     breakpoint: 480,
+    //     settings: {
+    //       arrows: false,
+    //     },
+    //   },
+    // ],
   };
   return (
-    <Flex w="100%" justify="center" py="40px" px="20px">
+    <Flex
+      w="100%"
+      align="center"
+      direction="column"
+      pb="40px"
+      px="20px"
+      bgColor="#f2edda"
+    >
+      <DecorationTitle>創作者推薦</DecorationTitle>
       <Flex w={space} align="center" direction="column">
-        <Title
-          title="創作者推薦"
-          // subTitle="真實引擎成為創作者的合作夥伴"
-        />
-        <Flex
-          w={{ base: '100%', lg: '75%' }}
-          py="30px"
-          pb="48px"
-          justify="center"
-          boxShadow="0 20px 40px 0 rgb(12 0 46 / 6%)"
-        >
+        <Flex w="100%" py="30px" pb="48px" justify="center">
           <Slick
             {...settings}
             style={{

@@ -5,29 +5,27 @@ const CardFeedback = props => {
   return (
     <Flex h="100%" justify="center">
       <Flex
-        w={{ base: '100%', lg: '260px' }}
+        w={{ base: '100%', lg: '460px' }}
         align="flex-start"
         zIndex="2"
-        bg="white"
         p="20px"
         m="20px"
         direction="column"
         rounded="sm"
-        boxShadow="0 20px 40px 0 rgb(12 0 46 / 6%)"
       >
         <Flex>
           {Array.apply(null, new Array(5)).map((_, index) => (
-            <Icon as={FaStar} key={index} size="20px" color="#f5c10d" />
+            <Icon as={FaStar} key={index} h="40px" w="40px" color="#1b9aa6" />
           ))}
         </Flex>
-        <Heading as="h4" fontSize="20px" pt="18px">
+        <Heading as="h4" fontSize="40px" pt="60px" pb="40px">
           {props.project}
         </Heading>
-        <Text maxW="400px" textAlign="left" color="#7b7b93" py="16px">
+        <Text fontSize="30px" textAlign="left" color="#181818" py="16px">
           {props.feedback}
         </Text>
         <Flex flex="1" align="flex-end">
-          <Text color="#909095" fontSize="12px">
+          <Text fontSize="24px" color="#181818">
             {props.name}
           </Text>
         </Flex>
