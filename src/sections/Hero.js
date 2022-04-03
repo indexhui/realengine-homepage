@@ -5,7 +5,6 @@ import useSpace from '../hooks/useSpace';
 import MainButton from '../components/homepage/button/MainButton';
 
 import video from '../assets/video/hero.mp4';
-import texture from '../assets/images/texture.png';
 
 const MotionHeading = motion(Heading);
 const MotionText = motion(Text);
@@ -71,7 +70,6 @@ const Hero = () => {
         w="100%"
         h={{ base: '60vh', lg: '80vh' }}
         bg="rgba(0,0,0,0.9)"
-        // bgImage={`url('${texture}')`}
       ></Box>
       <Box
         as="video"
@@ -84,10 +82,6 @@ const Hero = () => {
         type="video/mp4"
         style={videoStyle}
       ></Box>
-      {/* <video loop muted autoPlay preload="auto" style={videoStyle}>
-        <source src={video} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video> */}
     </Flex>
   );
 };

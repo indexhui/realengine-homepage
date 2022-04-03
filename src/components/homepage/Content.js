@@ -11,14 +11,14 @@ const Content = props => {
       <Flex w={{ base: '100%', lg: '50%' }}>
         <Box
           w="100%"
-          h={{ base: '220px', lg: '300px' }}
+          h={{ base: '220px', lg: '630px' }}
           overflow="hidden"
           mr={{ base: '0', lg: '10%' }}
         >
           <Image
-            _hover={{ transform: 'scale(1)' }}
-            transform="scale(1.25)"
-            transition="transform .5s"
+            // _hover={{ transform: 'scale(1)' }}
+            // transform="scale(1.25)"
+            // transition="transform .5s"
             src={props.image}
             alt="props.title"
           />
@@ -33,16 +33,16 @@ const Content = props => {
         <RevealFlex>
           <Heading
             as="h3"
-            color="#263b5e"
-            fontSize="36px"
-            pb="20px"
+            color="#1b9aa6"
+            fontSize="48px"
+            pb="60px"
             pt={{ base: '32px', lg: '0' }}
           >
             {props.title}
           </Heading>
         </RevealFlex>
         <RevealFlex y="35" duration="1">
-          <Text fontSize="22px" lineHeight="36px">
+          <Text fontSize="30px" lineHeight="36px">
             {props.content}
           </Text>
         </RevealFlex>
